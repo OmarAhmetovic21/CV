@@ -1,7 +1,16 @@
 <div class="section section-buttons">
     <div class="container">
         <div class="tim-title">
-            <h2>Basic Components</h2>
+            <div [ngClass]="isDesktopDevice ? 'col-6': 'col-12'">
+                <h2>About me</h2>
+                <img [ngClass]="isDesktopDevice ?  'col-6': 'col-12'" src="assets/img/Maturska.jpg" alt="">
+                <p>My name is Omar Ahmetović. I am 21 years old. I live in Sarajevo, Bosnia and Herzegovina.
+                    I am a 3rd year student at International University of Sarajevo. I am hard working, determined,
+                    and I enjoy programming. Apart from programming, I also enjoy playing sports such as football
+                    basketball, table tenis and I also enjoy plane spotting. I am also good at foreign languages such as:
+                    English, Turkish, German and Arabic. I am also ready to learn new technologies and improve my
+                    programming skills.</p>
+            </div>
         </div>
         <div id="buttons">
             <div class="tim-title">

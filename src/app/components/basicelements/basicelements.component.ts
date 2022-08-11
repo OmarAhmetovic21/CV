@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-basicelements',
@@ -10,8 +11,13 @@ export class BasicelementsComponent implements OnInit {
     doubleSlider = [20, 60];
     state_default: boolean = true;
     focus: any;
-    constructor() { }
+    isDesktopDevice: any;
+    constructor(
+      private deviceService: DeviceDetectorService
+    ) { }
 
-    ngOnInit() {}
+    ngOnInit() {
+      this.isDesktopDevice = this.deviceService.isDesktop();
+    }
 
 }
