@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-app.use(express.static(__dirname + '/dist/paper-kit-2-angular'));
+app.use(express.static(__dirname + '/dist/pk2-angular'));
 app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname+
-'/dist/paper-kit-2-angular/index.html'));});
+'/dist/pk2-angular/index.html'));});
 app.listen(process.env.PORT || 8080);
